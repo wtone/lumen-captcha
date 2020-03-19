@@ -1,5 +1,5 @@
 {
-	"name": "wtone/captcha",
+	"name": "wtone/lumen-captcha",
 	"type": "package",
 	"description": "Laravel 5 & 6 & lumen 6 Captcha Package",
 	"keywords": ["Lumen6 laravel6 Captcha", "laravel6 Security", "laravel6 Captcha", "laravel5 Security", "Captcha"],

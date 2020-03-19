@@ -183,7 +183,7 @@ class Captcha
      * @param Filesystem $files
      * @param Repository $config
      * @param ImageManager $imageManager
-     * @param Session $session
+     * @param $session
      * @param Hasher $hasher
      * @param Str $str
      * @throws Exception
@@ -193,7 +193,7 @@ class Captcha
         Filesystem $files,
         Repository $config,
         ImageManager $imageManager,
-        Session $session,
+        $session,
         Hasher $hasher,
         Str $str
     ) {

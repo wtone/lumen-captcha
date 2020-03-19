@@ -1,6 +1,6 @@
 <?php
 
-namespace Mews\Captcha;
+namespace Wtone\Captcha;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
@@ -8,7 +8,7 @@ use Illuminate\Validation\Factory;
 
 /**
  * Class CaptchaServiceProvider
- * @package Mews\Captcha
+ * @package Wtone\Captcha
  */
 class CaptchaServiceProvider extends ServiceProvider
 {
@@ -23,8 +23,8 @@ class CaptchaServiceProvider extends ServiceProvider
         if (strpos($this->app->version(), 'Lumen') !== false) {
             /* @var Router $router */
             $router = $this->app['router'];
-            $router->get('captcha[/api/{config}]', 'Mews\Captcha\LumenCaptchaController@getCaptchaApi');
-            $router->get('captcha[/{config}]', 'Mews\Captcha\LumenCaptchaController@getCaptcha');
+            $router->get('captcha[/api/{config}]', 'Wtone\Captcha\LumenCaptchaController@getCaptchaApi');
+            $router->get('captcha[/{config}]', 'Wtone\Captcha\LumenCaptchaController@getCaptcha');
         } else {
             // Publish configuration files
             $this->publishes([
@@ -34,11 +34,11 @@ class CaptchaServiceProvider extends ServiceProvider
             /* @var Router $router */
             $router = $this->app['router'];
             if ((double)$this->app->version() >= 5.2) {
-                $router->get('captcha/api/{config?}', '\Mews\Captcha\CaptchaController@getCaptchaApi')->middleware('web');
-                $router->get('captcha/{config?}', '\Mews\Captcha\CaptchaController@getCaptcha')->middleware('web');
+                $router->get('captcha/api/{config?}', '\Wtone\Captcha\CaptchaController@getCaptchaApi')->middleware('web');
+                $router->get('captcha/{config?}', '\Wtone\Captcha\CaptchaController@getCaptcha')->middleware('web');
             } else {
-                $router->get('captcha/api/{config?}', '\Mews\Captcha\CaptchaController@getCaptchaApi');
-                $router->get('captcha/{config?}', '\Mews\Captcha\CaptchaController@getCaptcha');
+                $router->get('captcha/api/{config?}', '\Wtone\Captcha\CaptchaController@getCaptchaApi');
+                $router->get('captcha/{config?}', '\Wtone\Captcha\CaptchaController@getCaptcha');
             }
         }
 

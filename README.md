@@ -81,13 +81,13 @@ in `bootstrap/app.php`.
 ```php
     // regiseter Provider
     $app->register(Illuminate\Session\SessionServiceProvider::class);
-    $app->register(Mews\Captcha\CaptchaServiceProvider::class);
+    $app->register(Wtone\Captcha\CaptchaServiceProvider::class);
     // load config
     $app->configure('session');
     $app->configure('captcha');
     // set alias
     $app->alias('session', 'Illuminate\Session\SessionManager');
-    $app->alias('Captcha', Mews\Captcha\Facades\Captcha::class);
+    $app->alias('Captcha', Wtone\Captcha\Facades\Captcha::class);
 ```
 
 

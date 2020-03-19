@@ -1,13 +1,13 @@
 <?php
 
-namespace Mews\Captcha;
+namespace Wtone\Captcha;
 
 use Exception;
 use Illuminate\Routing\Controller;
 
 /**
  * Class CaptchaController
- * @package Mews\Captcha
+ * @package Wtone\Captcha
  */
 class CaptchaController extends Controller
 {

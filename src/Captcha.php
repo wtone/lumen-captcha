@@ -1,6 +1,6 @@
 <?php
 
-namespace Mews\Captcha;
+namespace Wtone\Captcha;
 
 /**
  * Laravel 5 & 6 Captcha package
@@ -28,7 +28,7 @@ use Illuminate\Support\HtmlString;
 
 /**
  * Class Captcha
- * @package Mews\Captcha
+ * @package Wtone\Captcha
  */
 class Captcha
 {

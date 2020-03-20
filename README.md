@@ -89,7 +89,7 @@ in `bootstrap/app.php`.
     $app->alias('session', 'Illuminate\Session\SessionManager');
     $app->alias('Captcha', Wtone\Captcha\Facades\Captcha::class);
 ```
-
+### make sure create folder "storage/framework/session" and chmod it
 
 
 # Return Image

@@ -23,7 +23,7 @@ class CaptchaServiceProvider extends ServiceProvider
         if (strpos($this->app->version(), 'Lumen') !== false) {
             /* @var Router $router */
             $router = $this->app['router'];
-            $router->get('captcha[/api/{config}]', 'Wtone\Captcha\LumenCaptchaController@getCaptchaApi');
+            $router->get('captcha/api[/{config}]', 'Wtone\Captcha\LumenCaptchaController@getCaptchaApi');
             $router->get('captcha[/{config}]', 'Wtone\Captcha\LumenCaptchaController@getCaptcha');
         } else {
             // Publish configuration files
